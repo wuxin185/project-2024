@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>菜单</title>
+    <style>
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      #menu li {
+        width: 100px;
+        height: 40px;
+        float: left;
+        background: #2c0cf8;
+        line-height: 40px;
+        text-align: center;
+      }
+      #menu a {
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        width: 100px;
+        height: 40px;
+      }
+      #menu li ul li {
+        background: #8281f4;
+      }
+    </style>
+
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $("#menu a").hover(
+          function () {
+            $(this).parent().find("ul").slideDown();
+          },
+          function () {
+            $(this).parent().find("ul").slideUp();
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <ul id="menu">
+      <li>
+        <a href="#">菜单1</a>
+        <ul>
+          <li>子菜单11</li>
+          <li>子菜单12</li>
+          <li>子菜单13</li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">菜单2</a>
+        <ul>
+          <li>子菜单21</li>
+          <li>子菜单22</li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">菜单3</a>
+        <ul>
+          <li>子菜单31</li>
+          <li>子菜单32</li>
+          <li>子菜单33</li>
+          <li>子菜单34</li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>
